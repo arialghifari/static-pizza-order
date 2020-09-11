@@ -27,11 +27,11 @@
         <input type="radio" name="pizza" id="vegetarian_pizza" class="pizzaa" value="8"><br>Vegetarian Pizza ($8)
     </div>
 </div>
-<div class="size">
+<div class="siize">
     <h2>Size</h2>
-    <input type="radio" name="size" value="small">Small    
-    <input type="radio" name="size" value="medium">Medium
-    <input type="radio" name="size" value="large">Large
+    <input type="radio" name="size" class="size" value="S">Small    
+    <input type="radio" name="size" class="size" value="M">Medium
+    <input type="radio" name="size" class="size" value="L">Large
 </div>
 
 <h2>Toppings</h2>
