@@ -1,0 +1,42 @@
+h3 {
+    color: red;
+    padding-right: 2px;
+    margin: 0;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+table.topping tr td {
+    padding: 4px 15px;
+    text-align: center;
+}
+
+table {
+    margin-top: 5px;
+}
+
+table.topping-checklist tr td {
+    padding: 3px 15px 0px 5px;
+}
+
+.pizza {
+    height: 220px;
+    /* background-color: yellow; */
+    text-align: center;
+}
+
+img {
+    width: 130px;
+    height: 120px;
+}
+
+.pizza-1, .pizza-2, .pizza-3 {
+    float: left;
+    margin-right: 10px;
+    width: 150px;
+    height: auto;
+    /* background-color: red; */
+}
