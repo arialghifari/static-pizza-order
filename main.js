@@ -1,27 +1,32 @@
 const pizza = document.getElementsByClassName("pizza");
 const sizes = document.getElementsByClassName("size");
+const toppings = document.getElementsByClassName("topping");
 const price = document.getElementById("price");
 
-for (i = 0; i < pizza.length; i++){
-    pizza[i].addEventListener("click", (e) => {
-        price.innerText = e.target.value;
+for (p = 0; p < pizza.length; p++){ // pizza loop
+    // when target pizza is click
+    pizza[p].addEventListener("click", (eP) => { // event pizza
+        // change price based on pizza selected
+        price.innerText = eP.target.value;
 
-        for (j = 0; j < sizes.length; j++) {
-            if (sizes[j].checked && sizes[j].value == "S") {
+        for (s = 0; s < sizes.length; s++) { // size loop
+            // check if size choosen
+            if (sizes[s].checked && sizes[s].value == "S") {
                 price.innerText = parseInt(price.innerText) - 1;
-            } else if (sizes[j].checked && sizes[j].value == "L") {
+            } else if (sizes[s].checked && sizes[s].value == "L") {
                 price.innerText = parseInt(price.innerText) + 2;
             } else {
                 price.innerText = price.innerText;
             }
 
-            sizes[j].addEventListener("click", (el) => {
-                if (el.target.value == "S" && e.target.checked == true ) {
-                    price.innerText =  parseInt(e.target.value) - 1;
-                } else if (el.target.value == "L") {
-                    price.innerText = parseInt(e.target.value) + 2;
+            // check if size is click or choose
+            sizes[s].addEventListener("click", (eS) => { // event size
+                if (eS.target.value == "S") {
+                    price.innerText =  parseInt(eP.target.value) - 1;
+                } else if (eS.target.value == "L") {
+                    price.innerText = parseInt(eP.target.value) + 2;
                 } else {
-                    price.innerText = e.target.value;
+                    price.innerText = eP.target.value;
                 }
             });
         }
