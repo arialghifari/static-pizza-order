@@ -2,9 +2,9 @@ const pizza = document.getElementsByClassName("pizza");
 const sizes = document.getElementsByClassName("size");
 const toppings = document.getElementsByClassName("topping");
 const price = document.getElementById("price");
-const arrPaperoni = ['avocado', 'broccoli', 'onions', 'zucchini', 'tuna', 'ham'];
-const arrCheese = ['broccoli', 'onions', 'zucchini', 'lobster', 'oyster', 'salmon', 'bacon', 'ham'];
-const arrVegetarian = ['broccoli', 'onions', 'zucchini', 'tuna', 'bacon', 'duck', 'ham', 'sausage'];
+const arrPaperoni = ['avocado', 'broccoli', 'onions', 'zucchini', 'tuna', 'ham', '', '', '', '', '', ''];
+const arrCheese = ['broccoli', 'onions', 'zucchini', 'lobster', 'oyster', 'salmon', 'bacon', 'ham', '', '', '', ''];
+const arrVegetarian = ['broccoli', 'onions', 'zucchini', 'tuna', 'bacon', 'duck', 'ham', 'sausage', '', '', '', ''];
 
 for (p = 0; p < pizza.length; p++){ // pizza loop
     // when target pizza is click
@@ -39,15 +39,13 @@ for (p = 0; p < pizza.length; p++){ // pizza loop
         } */
 
         if (eP.target.id == "paperoni_pizza") {
-            arrPaperoni.forEach(arr => {
-                for (arrToping = 0; arrToping < toppings.length; arrToping++) {
-                    if (arr == toppings[arrToping].name) {
-                        toppings[arrToping].disabled = false;
-                    } else {
-                        toppings[arrToping].disabled = true;
-                    }
-                }
-            });
+            for (arrToping = 0; arrToping < toppings.length; arrToping++) {
+                if (arrPaperoni[arrToping] == toppings[arrToping].name) {
+                    toppings[arrToping].disabled = false;
+                } else if (arrPaperoni[arrToping] != toppings[arrToping].name) {
+                    toppings[arrToping].disabled = true;
+                }   
+            };
         } else if (eP.target.id == "cheese_pizza") {
             for (arrP = 0; arrP < arrCheese.length; arrP++) {
                 for (arrToping = 0; arrToping < toppings.length; arrToping++) {

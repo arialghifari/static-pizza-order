@@ -40,24 +40,24 @@
 
     <table class="topping-checklist">
         <tr>
-            <td><input type="checkbox" class="topping" name="avocado" value="1">avocado (1$)</td>
-            <td><input type="checkbox" class="topping" name="lobster" value="2">lobster (2$)</td>
-            <td><input type="checkbox" class="topping" name="bacon" value="3">bacon (3$)</td>
+            <td><input type="checkbox" class="topping" disabled name="avocado" value="1">avocado (1$)</td>
+            <td><input type="checkbox" class="topping" disabled name="lobster" value="2">lobster (2$)</td>
+            <td><input type="checkbox" class="topping" disabled name="bacon" value="3">bacon (3$)</td>
         </tr>
         <tr>
-            <td><input type="checkbox" class="topping" name="broccoli" value="1">broccoli (1$)</td>
-            <td><input type="checkbox" class="topping" name="oyster" value="2">oyster (2$)</td>
-            <td><input type="checkbox" class="topping" name="duck" value="3">duck (3$)</td>
+            <td><input type="checkbox" class="topping" disabled name="broccoli" value="1">broccoli (1$)</td>
+            <td><input type="checkbox" class="topping" disabled name="oyster" value="2">oyster (2$)</td>
+            <td><input type="checkbox" class="topping" disabled name="duck" value="3">duck (3$)</td>
         </tr>
         <tr>
-            <td><input type="checkbox" class="topping" name="onions" value="1">onions (1$)</td>
-            <td><input type="checkbox" class="topping" name="salmon" value="2">salmon (2$)</td>
-            <td><input type="checkbox" class="topping" name="ham" value="3">ham (3$)</td>
+            <td><input type="checkbox" class="topping" disabled name="onions" value="1">onions (1$)</td>
+            <td><input type="checkbox" class="topping" disabled name="salmon" value="2">salmon (2$)</td>
+            <td><input type="checkbox" class="topping" disabled name="ham" value="3">ham (3$)</td>
         </tr>
         <tr>
-            <td><input type="checkbox" class="topping" name="zucchini" value="1">zucchini (1$)</td>
-            <td><input type="checkbox" class="topping" name="tuna" value="2">tuna (2$)</td>
-            <td><input type="checkbox" class="topping" name="sausage" value="3">sausage (3$)</td>
+            <td><input type="checkbox" class="topping" disabled name="zucchini" value="1">zucchini (1$)</td>
+            <td><input type="checkbox" class="topping" disabled name="tuna" value="2">tuna (2$)</td>
+            <td><input type="checkbox" class="topping" disabled name="sausage" value="3">sausage (3$)</td>
         </tr>
     </table>
 
