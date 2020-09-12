@@ -39,13 +39,15 @@ for (p = 0; p < pizza.length; p++){ // pizza loop
         } */
 
         if (eP.target.id == "paperoni_pizza") {
-            for (arrP = 0; arrP < arrPaperoni.length; arrP++) {
+            arrPaperoni.forEach(arr => {
                 for (arrToping = 0; arrToping < toppings.length; arrToping++) {
-                    if (arrPaperoni[arrP] == toppings[arrToping].name) {
+                    if (arr == toppings[arrToping].name) {
                         toppings[arrToping].disabled = false;
+                    } else {
+                        toppings[arrToping].disabled = true;
                     }
                 }
-            }
+            });
         } else if (eP.target.id == "cheese_pizza") {
             for (arrP = 0; arrP < arrCheese.length; arrP++) {
                 for (arrToping = 0; arrToping < toppings.length; arrToping++) {
