@@ -11,28 +11,28 @@
 
 <div class="container">
 <div class="left">
-    <div class="pizza">
+    <div class="pizzas">
         <h2>Pizza</h2>
 
         <div class="pizza-1">
             <img src="assets/pizza-1.jpg" alt="">
-            <input type="radio" name="pizza" id="paperoni_pizza" class="pizzaa" value="10"><br>Paperoni Pizza ($10)
+            <input type="radio" name="pizza" id="paperoni_pizza" class="pizza" value="10"><br>Paperoni Pizza ($10)
         </div>
 
         <div class="pizza-2">
             <img src="assets/pizza-2.jpg" alt="">
-            <input type="radio" name="pizza" id="cheese_pizza" class="pizzaa" value="13"><br>Cheese Pizza ($13)
+            <input type="radio" name="pizza" id="cheese_pizza" class="pizza" value="13"><br>Cheese Pizza ($13)
         </div>
 
         <div class="pizza-3">
             <img src="assets/pizza-3.jpg" alt="">
-            <input type="radio" name="pizza" id="vegetarian_pizza" class="pizzaa" value="8"><br>Vegetarian Pizza ($8)
+            <input type="radio" name="pizza" id="vegetarian_pizza" class="pizza" value="8"><br>Vegetarian Pizza ($8)
         </div>
     </div>
     <div class="siize">
         <h2>Size</h2>
         <input type="radio" name="size" class="size" value="S">Small (-1$)
-        <input type="radio" name="size" class="size" value="M">Medium
+        <input type="radio" name="size" class="size" value="M">Medium (default)
         <input type="radio" name="size" class="size" value="L">Large (+2$)
     </div>
 

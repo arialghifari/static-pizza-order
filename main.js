@@ -1,29 +1,29 @@
-const pizzas = document.querySelectorAll(".pizzaa");
+const pizza = document.getElementsByClassName("pizza");
+const sizes = document.getElementsByClassName("size");
 const price = document.getElementById("price");
-const sizes = document.querySelectorAll(".size");
 
-pizzas.forEach(pizza => {
-    pizza.addEventListener('click', (e) => {
-        price.innerHTML = e.currentTarget.value;
-        sizes[1].setAttribute("checked", "chekced");
-    });
-});
+for (i = 0; i < pizza.length; i++){
+    pizza[i].addEventListener("click", (e) => {
+        price.innerText = e.target.value;
 
-const papperoni = ['avocado', 'brocoli', 'onions'];
-
-function getToppings (pizzaChoice) {
-    let toppingsEl = document.getElementsByClassName("topping");
-    // Loop toppings element
-
-    for (Pc = 0; Pc < pizzaChoice.length; Pc++) {
-        // loop specific topping in the pizza
-        for (El = 0; El < 12; El++) {
-            if (toppingsEl[El].getAttribute("name") == pizzaChoice[Pc]) {
-                console.log(toppingsEl[El].getAttribute("name"));
+        for (j = 0; j < sizes.length; j++) {
+            if (sizes[j].checked && sizes[j].value == "S") {
+                price.innerText = parseInt(price.innerText) - 1;
+            } else if (sizes[j].checked && sizes[j].value == "L") {
+                price.innerText = parseInt(price.innerText) + 2;
             } else {
+                price.innerText = price.innerText;
             }
-        }
-    }
-}
 
-getToppings(papperoni);
+            sizes[j].addEventListener("click", (el) => {
+                if (el.target.value == "S" && e.target.checked == true ) {
+                    price.innerText =  parseInt(e.target.value) - 1;
+                } else if (el.target.value == "L") {
+                    price.innerText = parseInt(e.target.value) + 2;
+                } else {
+                    price.innerText = e.target.value;
+                }
+            });
+        }
+    });
+}

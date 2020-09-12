@@ -27,9 +27,8 @@ table.topping-checklist tr td {
     padding: 3px 15px 0px 5px;
 }
 
-.pizza {
+.pizzas {
     height: 220px;
-    /* background-color: yellow; */
     text-align: center;
 }
 
