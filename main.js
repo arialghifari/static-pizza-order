@@ -2,6 +2,9 @@ const pizza = document.getElementsByClassName("pizza");
 const sizes = document.getElementsByClassName("size");
 const toppings = document.getElementsByClassName("topping");
 const price = document.getElementById("price");
+const arrPaperoni = ['avocado', 'broccoli', 'onions', 'zucchini', 'tuna', 'ham'];
+const arrCheese = ['broccoli', 'onions', 'zucchini', 'lobster', 'oyster', 'salmon', 'bacon', 'ham'];
+const arrVegetarian = ['broccoli', 'onions', 'zucchini', 'tuna', 'bacon', 'duck', 'ham', 'sausage'];
 
 for (p = 0; p < pizza.length; p++){ // pizza loop
     // when target pizza is click
@@ -29,6 +32,36 @@ for (p = 0; p < pizza.length; p++){ // pizza loop
                     price.innerText = eP.target.value;
                 }
             });
+        }
+        
+        /* for (arrToping = 0; arrToping < toppings.length; arrToping++) {
+            toppings[arrToping].disabled = true;
+        } */
+
+        if (eP.target.id == "paperoni_pizza") {
+            for (arrP = 0; arrP < arrPaperoni.length; arrP++) {
+                for (arrToping = 0; arrToping < toppings.length; arrToping++) {
+                    if (arrPaperoni[arrP] == toppings[arrToping].name) {
+                        toppings[arrToping].disabled = false;
+                    }
+                }
+            }
+        } else if (eP.target.id == "cheese_pizza") {
+            for (arrP = 0; arrP < arrCheese.length; arrP++) {
+                for (arrToping = 0; arrToping < toppings.length; arrToping++) {
+                    if (arrCheese[arrP] == toppings[arrToping].name) {
+                        toppings[arrToping].disabled = false;
+                    }
+                }
+            }
+        } else {
+            for (arrP = 0; arrP < arrVegetarian.length; arrP++) {
+                for (arrToping = 0; arrToping < toppings.length; arrToping++) {
+                    if (arrVegetarian[arrP] == toppings[arrToping].name) {
+                        toppings[arrToping].disabled = false;
+                    }
+                }
+            }
         }
     });
 }
