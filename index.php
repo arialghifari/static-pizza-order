@@ -31,34 +31,33 @@
     </div>
     <div class="siize">
         <h2>Size</h2>
-        <input type="radio" name="size" class="size" value="S">Small    
+        <input type="radio" name="size" class="size" value="S">Small (-1$)
         <input type="radio" name="size" class="size" value="M">Medium
-        <input type="radio" name="size" class="size" value="L">Large
+        <input type="radio" name="size" class="size" value="L">Large (+2$)
     </div>
 
     <h2>Toppings</h2>
-    <a href="topping-list.php">View Topping Price List</a>
 
     <table class="topping-checklist">
         <tr>
-            <td><input type="checkbox" class="topping" name="Onions" id="onions" value="1">Onions</td>
-            <td><input type="checkbox" class="topping" name="Brocoli" value="1">Brocoli</td>
+            <td><input type="checkbox" class="topping" name="avocado" value="1">avocado (1$)</td>
+            <td><input type="checkbox" class="topping" name="lobster" value="2">lobster (2$)</td>
+            <td><input type="checkbox" class="topping" name="bacon" value="3">bacon (3$)</td>
         </tr>
         <tr>
-            <td><input type="checkbox" class="topping" name="Avocado" value="1">Avocado</td>
-            <td><input type="checkbox" class="topping" name="Zucchini" value="1">Zucchini</td>
+            <td><input type="checkbox" class="topping" name="brocoli" value="1">brocoli (1$)</td>
+            <td><input type="checkbox" class="topping" name="oyster" value="2">oyster (2$)</td>
+            <td><input type="checkbox" class="topping" name="duck" value="3">duck (3$)</td>
         </tr>
         <tr>
-            <td><input type="checkbox" class="topping" name="Lobster" value="3">Lobster</td>
-            <td><input type="checkbox" class="topping" name="Salmon" value="3">Salmon</td>
+            <td><input type="checkbox" class="topping" name="onions" value="1">onions (1$)</td>
+            <td><input type="checkbox" class="topping" name="salmon" value="2">salmon (2$)</td>
+            <td><input type="checkbox" class="topping" name="ham" value="3">ham (3$)</td>
         </tr>
         <tr>
-            <td><input type="checkbox" class="topping" name="Tuna" value="2">Tuna</td>
-            <td><input type="checkbox" class="topping" name="Duck" value="2">Duck</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" class="topping" name="Sausage" value="1">Sausage</td>
-            <td><input type="checkbox" class="topping" name="Ham" value="2">Ham</td>
+            <td><input type="checkbox" class="topping" name="zucchini" value="1">zucchini (1$)</td>
+            <td><input type="checkbox" class="topping" name="tuna" value="2">tuna (2$)</td>
+            <td><input type="checkbox" class="topping" name="sausage" value="3">sausage (3$)</td>
         </tr>
     </table>
 
