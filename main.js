@@ -1,10 +1,10 @@
 const pizza = document.getElementsByClassName("pizza");
 const sizes = document.getElementsByClassName("size");
 const toppings = document.getElementsByClassName("topping");
-const price = document.getElementById("price");
-const arrPaperoni = ['avocado', 'broccoli', 'onions', 'zucchini', 'tuna', 'ham', '', '', '', '', '', ''];
-const arrCheese = ['broccoli', 'onions', 'zucchini', 'lobster', 'oyster', 'salmon', 'bacon', 'ham', '', '', '', ''];
-const arrVegetarian = ['broccoli', 'onions', 'zucchini', 'tuna', 'bacon', 'duck', 'ham', 'sausage', '', '', '', ''];
+let price = document.getElementById("price");
+const arrPaperoni = ['avocado', 'broccoli', 'onions', 'zucchini', '', '', '', 'tuna', '', '', 'ham', ''];
+const arrCheese = ['', 'broccoli', 'onions', 'zucchini', 'lobster', 'oyster', 'salmon', '', 'bacon', '',  'ham', ''];;
+const arrVegetarian = ['', 'broccoli', 'onions', 'zucchini', '', '', '', 'tuna', 'bacon', 'duck', 'ham', 'sausage'];
 
 for (p = 0; p < pizza.length; p++){ // pizza loop
     // when target pizza is click
@@ -34,34 +34,49 @@ for (p = 0; p < pizza.length; p++){ // pizza loop
             });
         }
         
-        /* for (arrToping = 0; arrToping < toppings.length; arrToping++) {
-            toppings[arrToping].disabled = true;
-        } */
-
+        
         if (eP.target.id == "paperoni_pizza") {
-            for (arrToping = 0; arrToping < toppings.length; arrToping++) {
-                if (arrPaperoni[arrToping] == toppings[arrToping].name) {
-                    toppings[arrToping].disabled = false;
-                } else if (arrPaperoni[arrToping] != toppings[arrToping].name) {
-                    toppings[arrToping].disabled = true;
-                }   
-            };
+            for (t = 0; t < toppings.length; t++) {
+                if (toppings[t].name == arrPaperoni[t]) {
+                    toppings[t].disabled = false;
+                } else {
+                    toppings[t].checked = false;
+                    toppings[t].disabled = true;
+                }
+            }
         } else if (eP.target.id == "cheese_pizza") {
-            for (arrP = 0; arrP < arrCheese.length; arrP++) {
-                for (arrToping = 0; arrToping < toppings.length; arrToping++) {
-                    if (arrCheese[arrP] == toppings[arrToping].name) {
-                        toppings[arrToping].disabled = false;
-                    }
+            for (t = 0; t < toppings.length; t++) {
+                if (toppings[t].name == arrCheese[t]) {
+                    toppings[t].disabled = false;
+                } else {
+                    toppings[t].checked = false;
+                    toppings[t].disabled = true;
                 }
             }
         } else {
-            for (arrP = 0; arrP < arrVegetarian.length; arrP++) {
-                for (arrToping = 0; arrToping < toppings.length; arrToping++) {
-                    if (arrVegetarian[arrP] == toppings[arrToping].name) {
-                        toppings[arrToping].disabled = false;
-                    }
+            for (t = 0; t < toppings.length; t++) {
+                if (toppings[t].name == arrVegetarian[t]) {
+                    toppings[t].disabled = false;
+                } else {
+                    toppings[t].checked = false;
+                    toppings[t].disabled = true;
                 }
             }
         }
+
+        for (tr = 0; tr < toppings.length; tr++) {
+            if (toppings[tr].checked) {
+                price.innerText = (parseInt(price.innerText) - parseInt(eP.target.value)) + (parseInt(toppings[tr].value) + parseInt(eP.target.value));
+            }
+
+            toppings[tr].addEventListener("click", (eT) => { // event toppings
+                if (eT.target.checked) {
+                    price.innerText =  parseInt(price.innerText) + parseInt(eT.target.value);
+                } else {
+                    price.innerText =  parseInt(price.innerText) - parseInt(eT.target.value);
+                }
+            });
+        }
+
     });
 }
