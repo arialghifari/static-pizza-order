@@ -24,12 +24,20 @@ for (p = 0; p < pizza.length; p++){ // pizza loop
 
             // check if size is click or choose
             sizes[s].addEventListener("click", (eS) => { // event size
+                // check wich size selected
                 if (eS.target.value == "S") {
                     price.innerText =  parseInt(eP.target.value) - 1;
                 } else if (eS.target.value == "L") {
                     price.innerText = parseInt(eP.target.value) + 2;
                 } else {
-                    price.innerText = eP.target.value;
+                    price.innerText = parseInt(eP.target.value);
+                }
+
+                // check wich topping is cheked and add that to the price
+                for (t = 0; t < toppings.length; t++) {
+                    if (toppings[t].checked) {
+                        price.innerText = parseInt(price.innerText) + parseInt(toppings[t].value)
+                    }
                 }
             });
         }
@@ -64,14 +72,16 @@ for (p = 0; p < pizza.length; p++){ // pizza loop
             }
         }
 
+        // toppings loop
         for (tr = 0; tr < toppings.length; tr++) {
-            if (toppings[tr].checked) {
+            if (toppings[tr].checked) { // check if there's topping checked before
                 price.innerText = (parseInt(price.innerText) - parseInt(eP.target.value)) + (parseInt(toppings[tr].value) + parseInt(eP.target.value));
             }
 
             toppings[tr].addEventListener("click", (eT) => { // event toppings
-                if (eT.target.checked) {
+                if (eT.target.checked) { // when topping clicked
                     price.innerText =  parseInt(price.innerText) + parseInt(eT.target.value);
+                    console.log(eT.target.value);
                 } else {
                     price.innerText =  parseInt(price.innerText) - parseInt(eT.target.value);
                 }

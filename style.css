@@ -25,6 +25,7 @@ table.toppingN tr td {
 
 table {
     margin-top: 5px;
+    border-collapse: collapse;
 }
 
 table.topping-checklist tr td {
